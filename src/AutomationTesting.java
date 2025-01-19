@@ -1,30 +1,30 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-//import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class AutomationTesting {
 
 	public static void main(String[] args) {
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\OmkarPatil\\Documents\\ChromeDrivers\\chromedriver.exe");
-		 //System.setProperty("Edgedriver.Edge.driver", "C:\\Users\\OmkarPatil\\Documents\\ChromeDrivers\\msedgedriver.exe");
-	        
-		WebDriver driver = new ChromeDriver();
-	     //EdgeDriver driver = new EdgeDriver();   
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\OmkarPatil\\Documents\\ChromeDrivers\\chromedriver.exe");
+		 System.setProperty("Edgedriver.Edge.driver", "C:\\Users\\OmkarPatil\\Documents\\ChromeDrivers\\msedgedriver.exe");
+		
+		//WebDriver driver = new ChromeDriver();
+	
+	     EdgeDriver driver = new EdgeDriver();   
 	        // Navigate to the Website
-	        driver.get("https://codemanager.pythonanywhere.com/register");
+	         
 
 	        // User Registration
 	        // Assuming you have fields like first name, last name, user-name, email, password, etc.
 	        
 	       
-	        driver.findElement(By.id("fname-input")).sendKeys("automation");
+	        driver.findElement(By.id("Mobile Number or Email")).sendKeys("automation");
 	        
 	        driver.findElement(By.id("lname-input")).sendKeys("Testing");
  
-	        driver.findElement(By.id("email-input")).sendKeys("Test123@example.com");
+	        //driver.findElement(By.id("email-input")).sendKeys("Test123@example.com");
 
 	        driver.findElement(By.id("user-input")).sendKeys("selenium");
 
