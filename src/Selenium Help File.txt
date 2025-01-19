@@ -1,0 +1,56 @@
+SELENIUM XPATH
+
+there are 2 types of XPATH
+	1)Absolute XPath ---> /
+	2)Relative XPath ---> //
+	
+Relative Xpath has 5 types
+	1)By attributes
+	2)by text function
+	3)by contains function
+	4)by indexing
+	5)by independant & Dependant
+	
+	Syntax    ----->  //tagname[@Attri Name= 'Atri value']
+					eg---> //button[@type='submit']
+					
+					
+Xpath by independent & Dependent 
+	-->Locate for independent value-- product name
+	-->Locate for common parent -- by backward traversing    (/..) hightlight all product(logo+name+price)
+	-->Locate for dependent element --> by forward travesing (/)-- price
+	
+	syntax example-- 1) (//span[text()='Samsung Galaxy S24 Ultra 5G AI Smartphone (Titanium Black, 12GB, 256GB Storage)'])/../../../../div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/span[1]
+	
+	2) (//div[text()='SAMSUNG Galaxy S23 Ultra 5G (Green, 1 TB)'])//../..//../div[2]/div[2]/div[1]/div[1]/div[1]
+	
+	
+Clear() Method 
+clear the value field in element
+
+getAttribute Method
+	 Accept an parameter  getAttribute("class")
+	 
+getCssValue()- get css value
+getTagname()-- get tagname
+
+getSize()-- get the height and width of element 
+	To get Height --getheight()
+	to get width --getwidth()
+
+getLocation()
+	get xaxis & yaxis of element
+
+getRect()-----> driver.findElement(By.xpath("//img[@alt='Facebook']")).getRect().getHeight()--getwidth()----getX()----getY()
+		to get both height and width  & X axis & Y axis
+		
+isDisplayed()
+	to verify that element displayed or not
+	return type is boolean True and false
+
+isEnabled()
+  to check whether that element is clickable or not 
+ 
+isSelected()
+
+Submit()
